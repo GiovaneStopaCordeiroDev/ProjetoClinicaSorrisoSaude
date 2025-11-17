@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    background-color: #FFFFFF;    
+     background: rgba(255, 255, 255, 0.5); /* 50% transparente */
+
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size:1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    transform: scale(1.1);
+    color: #bebebe;
+}
+
+/* Seção Home */
+.hero {
+    background-image: url(/src/images/background-home.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.hero-section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 5%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-section h1{
+    font-size: 4rem;
+    color: #FFFFFF;
+}
+
+.hero-section h2 {
+    font-size: 2.4rem;
+    color: #FFFFFF;
+}
+
+.hero-section button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background-color: #6CB9F8;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-section button:hover {
+    background-color: #5693c5;
+}
+
+/* Seção Sobre*/
+.secao-sobre {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.h1-section {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.conteudo-sobre {
+    margin-top: 7%;
+    display: flex;
+    flex-wrap: wrap 1 1;
+    gap: 30px;
+    align-items: start;
+}
+
+.p-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.3rem;
+    color: #51AAF3;
+}
+
+/* Seção Serviços*/
+.section-servicos {
+    margin-top: 10%;
+    width: 100%;
+} 
+
+.conteudo-servicos {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap 1 1 1 1 200px;;
+    padding: 0 30px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-servicos {
+    width: 232px;
+    height: 370px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #51AAF3;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card-servicos:hover { 
+    transform: scale(1.1);
+    background-color: #86bfee;
+}
+.title-card-servicos {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+.p-card-servicos {
+    margin: 0 10%;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Seção Agendamento*/
+
+.section-agendamento {
+    margin-top: 10%;
+}
+
+.section-agendamento h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.agendamento-form {
+    margin-top:  5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #3471A3;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 20%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    border: none;
+    border-radius: 20px;
+    height: auto;
+}
+
+form h1 {
+    color: #FFFFFF;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form label {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+
+.input-form input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.button-agendar {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #003B65;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.button-agendar:hover {
+    background-color: #0061a7;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #8EBFDE;
+    height: 20vh;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.achar-admin {
+    text-decoration: none;
+}
+
+.conteudo-footer .giovane {
+    text-decoration: none;
+    color: #2BD700;
+}
+
+.redes-footer {
+    font-size: 1.2rem;
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* LoginADM */
+
+.agendamento-form-ADMIN {
+    margin-top:  5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-form-ADMIN {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form-ADMIN label {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+
+.input-form-ADMIN input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.button-agendar-ADMIN {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #003B65;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+}
+
+.button-agendar-ADMIN:hover {
+    background-color:#006dbb ;
+}
+
+/* Painel ADMIN */
+
+.painel {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #3471A3;
+    height: 10vh
+}
+
+.area-clientes {
+    margin-top: 10%;
+}
+.area-clientes h1{
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+.area-clientes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    height: 10vh;
+}
+
+.cliente-dados {
+    background-color: #0061a7;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    width: 40vw;
+    height: 50vh;
+}
+
+.nome-email-cliente {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
