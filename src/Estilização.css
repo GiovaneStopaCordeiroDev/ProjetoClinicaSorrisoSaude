@@ -41,7 +41,7 @@
     color: #bebebe;
 }
 
-/* Seção Home */
+/* Seção Hero */
 .hero {
     background-image: url(/src/images/background-home.png);
     background-repeat: no-repeat;
@@ -126,14 +126,13 @@
 } 
 
 .conteudo-servicos {
+    width: 100%;
     margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     align-items: center;
     justify-content: center;
-    align-items: center;
-    justify-content: center;
+    padding: 0px 30px;
 }
 
 .card-servicos {
@@ -246,7 +245,7 @@ form h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 2px 10px;
     align-items: center;
     color: #FFFFFF;
     font-weight: bold;
@@ -254,7 +253,7 @@ form h1 {
 }
 
 .achar-admin {
-    text-decoration: none;
+    margin-top: 2%;
 }
 
 .conteudo-footer .giovane {
@@ -397,7 +396,10 @@ form h1 {
 
 @media (max-width: 768px) {
     .nav a{
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    .img-header {
+        overflow: hidden;
     }
     .h1-section {
         font-size: 2.5rem;
@@ -405,11 +407,19 @@ form h1 {
 
     /* Responsividade Hero*/
 
+    .hero {
+        padding: 0;
+        background-size: cover;
+        background-position: top center;
+        height: 70vh;
+    }   
+
+
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .hero-section  h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     
     /* Responsividade Sobre*/
@@ -418,10 +428,45 @@ form h1 {
         align-items: center;
     }
     .p-sobre {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .img-sobre {
+        width: 80%;
+    }
+
+    /* Responsividade Serviços */
+
+    .conteudo-servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo-servicos {
+    gap: 10px;
+    }
+
+    .title-card-servicos {
+        font-size: 0.8rem;
+    }
+    .p-card-servicos {
+        font-size: 0.6rem;
+    }
+    .card-servicos {
+    width: 150px;
+    height: 230px;
+    gap: 2px;
+    }
+
+    .img-servicos {
+        width: 100%;
     }
 
     /* Footer */
+    .footer {
+    flex-direction: column;
+    height: 32vh;
+    }
     .conteudo-footer {
         font-size: 1rem;
     }

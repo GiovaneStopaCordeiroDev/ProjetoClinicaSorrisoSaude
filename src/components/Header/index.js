@@ -11,7 +11,7 @@ function Header() {
                     <a href="#">Serviços</a>
                     <a href="#">Agendamento</a>
                 </div>
-                <img src={logoHeader} alt='Clinica Sorriso & Saúde Dentista'/>
+                <img src={logoHeader} alt='Clinica Sorriso & Saúde Dentista' className='img-header'/>
             </div>
         </div>
     )
