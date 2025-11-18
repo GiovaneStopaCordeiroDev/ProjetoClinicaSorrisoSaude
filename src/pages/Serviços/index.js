@@ -7,7 +7,7 @@ import '../../Estilização.css'
 function Serviços() {
     return (
         <div>
-            <div className="section-servicos">
+            <div className="section-servicos" id='servicos'>
                 <h1 className="h1-section">Nossos Serviços</h1>
 
                 <div className="conteudo-servicos">

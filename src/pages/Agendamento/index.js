@@ -1,5 +1,5 @@
 import { db } from '../../firebaseConnection';
-import {doc, setDoc, collection, addDoc, getDoc} from 'firebase/firestore';
+import { collection, addDoc} from 'firebase/firestore';
 import { useState } from 'react';
 
 function Agendamento() {
@@ -10,13 +10,20 @@ function Agendamento() {
     async function agendarCliente(e) {
         e.preventDefault();
 
-        await setDoc(doc(db, 'Clientes', NomeCliente), {
+         if(!NomeCliente | !EmailCliente | !NumeroCliente){
+            alert("Digite em todos os locais")
+            return;
+        }
+
+        await addDoc(collection(db, "Clientes"), {
             nomecliente: NomeCliente,
             emailcliente: EmailCliente,
             numerocliente: NumeroCliente
         })
         .then(() => {
-            alert("Agendado!")
+            setNomeCliente("");
+            setEmailCliente("");
+            setNumeroCliente("");
         })
         .catch((erro) => {
             alert("Erro" + erro)
@@ -56,7 +63,7 @@ function Agendamento() {
                             />
                         </div>
 
-                        <button className="button-agendar" onClick={agendarCliente}>Agendar</button>
+                        <button className="button-agendar" type='submit'>Agendar</button>
                     </form>
                 </div>
             </div>

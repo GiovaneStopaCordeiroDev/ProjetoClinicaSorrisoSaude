@@ -299,6 +299,8 @@ form h1 {
 }
 
 .button-agendar-ADMIN {
+    align-items: center;
+    justify-content: center;
     width: 300px;
     height: 40px;
     border: none;
@@ -309,7 +311,6 @@ form h1 {
     font-size: 1.3rem;
     transition: 0.3s ease;
 }
-
 .button-agendar-ADMIN:hover {
     background-color:#006dbb ;
 }
@@ -346,16 +347,48 @@ form h1 {
     background-color: #0061a7;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
     gap: 15px;
     align-items: center;
     border: none;
     border-radius: 20px;
-    width: 40vw;
+    width: 45vw;
     height: 50vh;
+    color: #FFFFFF;
+    font-size: 1.2rem;
 }
 
 .nome-email-cliente {
     padding: 10px 30px;
     display: flex;
     flex-direction: column;
+}
+
+.btn-enviarmsg {
+    background-color: #2BD700;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn-enviarmsg:hover {
+        background-color: #20a000;
+}
+
+.btn-excluirmsg {
+    background-color: #d4160f;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn-excluirmsg:hover {
+        background-color: #970601;
 }

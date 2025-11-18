@@ -1,7 +1,26 @@
 import '../../Estilização.css'
-import {Link} from 'react-router-dom'
+import {signInWithEmailAndPassword} from 'firebase/auth'
+import {auth} from '../../firebaseConnection'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function LoginADM() {
+
+    const navigate = useNavigate()
+	const [email, setEmail] = useState('')
+	const [senha, setSenha] = useState('')
+
+    async function logarUsuario() {
+        try {
+        await signInWithEmailAndPassword(auth, email, senha)
+        setEmail("")
+        setSenha("")
+        navigate('/painelADMINClinicaSorriso&Saude');
+        } catch (error) {
+        alert(error.message)
+      }
+
+    }
     return (
         <div>
             <div>   
@@ -11,15 +30,21 @@ function LoginADM() {
                         <h1>Login Painel de ADMIN</h1>
                         <div className="input-form-ADMIN">
                             <label>Email:</label>
-                            <input type="text" placeholder="Digite seu email"/>
+                            <input type="text" placeholder="Digite seu email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
 
                         <div className="input-form-ADMIN">
                             <label>Senha:</label>
-                            <input type="text" placeholder="Digite sua senha"/>
+                            <input type="password" placeholder="Digite sua senha"
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                            />
                         </div>
 
-                       <Link to={'/painelADMINClinicaSorriso&Saude'} className="button-agendar-ADMIN">Acessar Painel</Link>
+                    <button type='button' className='button-agendar-ADMIN' onClick={logarUsuario}>Acessar Painel</button> 
                     </form>
                 </div>
             </div>
