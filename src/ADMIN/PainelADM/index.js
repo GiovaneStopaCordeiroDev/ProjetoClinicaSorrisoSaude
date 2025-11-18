@@ -56,10 +56,9 @@ function PainelAdmin() {
     return (
         <div>
             <div className="painel">
-                <div className="header">
-                    <p>Settings</p>
+                <div className="header header-painel">
                     <h1>Painel ADMIN Clínica Sorriso & Saúde</h1>
-                   <Link to={'/'}>Ir para o site</Link>
+                   <Link to={'/'} className="painel-irsite">Ir para o site</Link>
                 </div>
                    <div className="area-clientes">
                     <h1>Clientes</h1> 
@@ -74,8 +73,11 @@ function PainelAdmin() {
                                     <button onClick={() => enviarMensagem(cliente.numero)} className="btn-enviarmsg">Enviar Mensagem</button>
                                     <button onClick={() => excluirCliente(cliente.id)} className="btn-excluirmsg">Excluir</button>
                                 </li>
+                                
                             )
+
                         })}
+                        
                     </ul>
                    </div>
             </div>
