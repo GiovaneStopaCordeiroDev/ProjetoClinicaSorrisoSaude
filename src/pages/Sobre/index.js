@@ -13,7 +13,7 @@ function Sobre() {
                         <p>O projeto começou em uma pequena sala, com poucos equipamentos, mas com uma grande missão: transformar o atendimento tradicional em uma experiência leve, segura e humana.</p>
                         <p> Com o tempo, o cuidado e a dedicação da equipe conquistaram a confiança da comunidade local — e a clínica cresceu, tornando-se referência em odontologia estética e ortodontia personalizada. Hoje, continuamos com o mesmo propósito que nos move desde o início: cuidar de sorrisos e espalhar confiança.</p>
                     </div>
-                    <img src={imgSobre } alt='História Clinica & Saúde'/>
+                    <img src={imgSobre } alt='História Clinica & Saúde' className='img-sobre'/>
                 </div>
             </div>
         </div>

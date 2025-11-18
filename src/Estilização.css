@@ -10,12 +10,10 @@
 .header {
     position: sticky;
     top: 0;
-    width: 100%;
     max-height: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 100px;
     align-items: center;
     background-color: #FFFFFF;    
      background: rgba(255, 255, 255, 0.5); /* 50% transparente */
@@ -23,6 +21,7 @@
 }
 
 .nav {
+    margin-left: 2%;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -129,9 +128,10 @@
 .conteudo-servicos {
     margin-top: 10%;
     display: flex;
-    flex-wrap: wrap 1 1 1 1 200px;;
-    padding: 0 30px;
+    flex-wrap: wrap;
     gap: 30px;
+    align-items: center;
+    justify-content: center;
     align-items: center;
     justify-content: center;
 }
@@ -391,4 +391,44 @@ form h1 {
 
 .btn-excluirmsg:hover {
         background-color: #970601;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .nav a{
+        font-size: 1.1rem;
+    }
+    .h1-section {
+        font-size: 2.5rem;
+    }
+
+    /* Responsividade Hero*/
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section  h2 {
+        font-size: 1.7rem;
+    }
+    
+    /* Responsividade Sobre*/
+    .conteudo-sobre{
+        flex-direction: column;
+        align-items: center;
+    }
+    .p-sobre {
+        font-size: 1.2rem;
+    }
+
+    /* Footer */
+    .conteudo-footer {
+        font-size: 1rem;
+    }
+    .redes-sociais {
+        font-size: 0.5rem;
+    }
+    .redes-sociais img {
+        width: 70%;
+    }
 }
