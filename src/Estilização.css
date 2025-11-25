@@ -227,6 +227,26 @@ form h1 {
     padding: 0 5px;
 }
 
+
+.grid-horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.grid-horarios button {
+    width: 80px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transform: 0.2s ease;
+}
+
+.grid-horarios button:hover {
+    background-color: #dfdfdf;
+}
+
 .button-agendar {
     width: 200px;
     height: 50px;
